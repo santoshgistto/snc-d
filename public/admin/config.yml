@@ -8,7 +8,7 @@ public_folder: img
 collections:
   - name: "SNC" # Used in routes, e.g., /admin/collections/blog
     label: "SNC" # Used in the UI
-    folder: "config" # The path to the folder where the markdown files are stored
+    folder: "content" # The path to the folder where the markdown files are stored
     extension: json
     format: json
     create: true # Allow users to create new markdown files.
