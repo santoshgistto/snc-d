@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
  # name: test-repo
-  repo: snc-demo # Branch to update (optional; defaults to master)
+  repo: main # Branch to update (optional; defaults to master)
  # base_url: https://oauth-github.vercel.app/
 
 media_folder: public/img
