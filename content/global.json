@@ -1,0 +1,63 @@
+{
+  "urls": {
+    "nabUrl": "adfadf",
+    "ssoRedirectURL": "adfasdf",
+    "termsAndConditionsUrl": "adfasf",
+    "webpageUrl": "adsfasdffda",
+    "licenseUrl": "adfadf",
+    "helpUrl": "asdfafd",
+    "atpUrl": "dfadf",
+    "privacyPolicyUrl": "adfadf",
+    "ssoLoginURL": "afdadsf",
+    "registrationUrl": "adfaf",
+    "faqUrl": "adfaf",
+    "serviceUrl": "adfadf",
+    "csURL": "adfadf"
+  },
+  "cloudShare": {
+    "url": "adfasdf"
+  },
+  "info": {
+    "country": "dfasdf",
+    "mcc": 3434,
+    "opCo": "adfasdf",
+    "service": "adfafd"
+  },
+  "connections": {
+    "maxUpgradeContactSyncRandomizeTimeMinutes": 60,
+    "mmUrl": "afdaf",
+    "osgUrl": "adsfadf",
+    "pvaUrl": "asdfadf"
+  },
+  "salt": {
+    "recipes": [
+      {
+        "width": 360,
+        "height": 480,
+        "mimeType": "adfasdf",
+        "name": "asdfafd"
+      }
+    ],
+    "url": "adfaf"
+  },
+  "taggingManager": {
+    "url": "adfadf"
+  },
+  "title": "global",
+  "digitalVault": {
+    "maxUpgradeContactSyncRandomizeTimeMinutes": "adfadf",
+    "defaultCameraRepositoryName": "asdfafd",
+    "extensionUrl": "adfaf",
+    "timelineDateUnknown": -4333,
+    "url": "adfadfa"
+  },
+  "features": {
+    "shareViaLinkEnabled": true,
+    "tagEventBackupCompleteBackground": true
+  },
+  "atp": {
+    "url": "adfa"
+  },
+  "customer": "bt",
+  "cloudRevokeApi": true
+}
