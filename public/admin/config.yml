@@ -1,23 +1,28 @@
 backend:
-  name: github
+  name: git-gateway
  # name: test-repo
-  repo: santoshgistto/snc-vercel # Branch to update (optional; defaults to master)
-  base_url: https://snc-vercel.vercel.app/
+  repo: snc-demo # Branch to update (optional; defaults to master)
+ # base_url: https://oauth-github.vercel.app/
 
 media_folder: public/img
+local_backend: true
 
 public_folder: img
 collections:
-  - name: "snc" # Used in routes, e.g., /admin/collections/blog
-    label: "snc post" # Used in the UI
-    folder: "content" # The path to the folder where the markdown files are stored
-    create: true # Allow users to create new markdown files.
-    format: json
-    extension: json
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for front matter. You will need to modify fields according to your project.
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Download", name: "download", widget: "string"}
-      - {label: "Author", name: "author", widget: "string", default: "Admin"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+    - label: "Home"
+      name: "home"
+      file: "content/home.md"
+      create: true
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Body", name: "body", widget: "markdown"}
+        - label: 'Cats'
+          name: "cats"
+          widget: list
+          fields:
+            - { label: "Name", name: "name", widget: "string"}
+            - { label: "Description", name: "description", widget: "text"}
