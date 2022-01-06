@@ -6,13 +6,100 @@ media_folder: public/img
 
 public_folder: img
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "BlogPost" # Used in the UI
+  - name: "SNC" # Used in routes, e.g., /admin/collections/blog
+    label: "SNC" # Used in the UI
     folder: "content" # The path to the folder where the markdown files are stored
     extension: json
     format: json
     create: true # Allow users to create new markdown files.
     fields: # The fields for front matter. You will need to modify fields according to your project.
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string", default: "Admin"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "File Name", name: "fileName", widget: "string"}
+      - {label: "customer", name: "customer", widget: "string"}
+      - {label: "cloudRevokeApi", name: "cloudRevokeApi", widget: "boolean", default: false}
+      - label: Atp
+        name: "atp"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}
+      - label: CloudShare
+        name: "cloudShare"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}          
+
+      - label: taggingManager
+        name: "taggingManager"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}
+
+      - label: salt
+        name: "salt"
+        widget: "object"
+        fields:
+          - {label: "url", name: "url", widget: "string"}
+          - label: "recipes"
+            name: "recipes"
+            widget: "list"
+            fields:
+              - {label: "mimeType", name: "mimeType", widget: "string"}
+              - {label: "name", name: "name", widget: "string"}
+              - {label: "width", name: "width", widget: "number", default: 360}
+              - {label: "height", name: "height", widget: "number", default: 480}
+
+
+          
+
+      - label: connections
+        name: "connections"
+        widget: "object"
+        fields:
+          - {label: "maxUpgradeContactSyncRandomizeTimeMinutes", name: "maxUpgradeContactSyncRandomizeTimeMinutes", widget: "number",default: 60}  
+          - {label: "mmUrl", name: "mmUrl", widget: "string"} 
+          - {label: "osgUrl", name: "osgUrl", widget: "string"} 
+          - {label: "pvaUrl", name: "pvaUrl", widget: "string"} 
+
+      - label: digitalVault
+        name: "digitalVault"
+        widget: "object"
+        fields:
+          - {label: "defaultRepositoryName", name: "maxUpgradeContactSyncRandomizeTimeMinutes", widget: "string"}  
+          - {label: "defaultCameraRepositoryName", name: "defaultCameraRepositoryName", widget: "string"} 
+          - {label: "extensionUrl", name: "extensionUrl", widget: "string"} 
+          - {label: "timelineDateUnknown", name: "timelineDateUnknown", widget: "number"} 
+          - {label: "url", name: "url", widget: "string"} 
+
+      - label: urls
+        name: "urls"
+        widget: "object"
+        fields:
+          - {label: "atpUrl", name: "atpUrl", widget: "string"}  
+          - {label: "csURL", name: "csURL", widget: "string"} 
+          - {label: "faqUrl", name: "faqUrl", widget: "string"} 
+          - {label: "helpUrl", name: "helpUrl", widget: "string"} 
+          - {label: "licenseUrl", name: "licenseUrl", widget: "string"}    
+          - {label: "nabUrl", name: "nabUrl", widget: "string"} 
+          - {label: "privacyPolicyUrl", name: "privacyPolicyUrl", widget: "string"} 
+          - {label: "registrationUrl", name: "registrationUrl", widget: "string"} 
+          - {label: "serviceUrl", name: "serviceUrl", widget: "string"} 
+          - {label: "ssoLoginURL", name: "ssoLoginURL", widget: "string"} 
+          - {label: "ssoRedirectURL", name: "ssoRedirectURL", widget: "string"} 
+          - {label: "termsAndConditionsUrl", name: "termsAndConditionsUrl", widget: "string"} 
+          - {label: "webpageUrl", name: "webpageUrl", widget: "string"}     
+
+
+      - label: info
+        name: "info"
+        widget: "object"
+        fields:
+          - {label: "country", name: "country", widget: "string"}  
+          - {label: "mcc", name: "mcc", widget: "number"} 
+          - {label: "opCo", name: "opCo", widget: "string"} 
+          - {label: "service", name: "service", widget: "string"} 
+
+      - label: features
+        name: "features"
+        widget: "object"
+        fields:
+          - {label: "shareViaLinkEnabled", name: "shareViaLinkEnabled", widget: "boolean"}  
+          - {label: "tagEventBackupCompleteBackground", name: "tagEventBackupCompleteBackground", widget: "boolean"}          
