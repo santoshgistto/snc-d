@@ -3,6 +3,17 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   //let { title, cats } = attributes;
+  useEffect(()=>{
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  },[])
 
   return (
     <>
