@@ -8,12 +8,12 @@ public_folder: img
 collections:
   - name: "SNC" # Used in routes, e.g., /admin/collections/blog
     label: "SNC" # Used in the UI
-    folder: "content" # The path to the folder where the markdown files are stored
+    folder: "./config" # The path to the folder where the markdown files are stored
     extension: json
     format: json
     create: true # Allow users to create new markdown files.
     fields: # The fields for front matter. You will need to modify fields according to your project.
-      - {label: "File Name", name: "fileName", widget: "string"}
+      - {label: "File Name", name: "title", widget: "string"}
       - {label: "customer", name: "customer", widget: "string"}
       - {label: "cloudRevokeApi", name: "cloudRevokeApi", widget: "boolean", default: false}
       - label: Atp
